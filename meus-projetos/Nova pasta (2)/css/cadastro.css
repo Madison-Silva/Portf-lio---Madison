@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #FFFFFF;
+  color: #333333;
+}
+
+/* Cabeçalho */
+.header {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333333;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.btn-login {
+  color: #333333;
+}
+
+.btn-signup {
+  background: #5B9BD5;
+  color: white;
+}
+
+/* Área de Cadastro */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px;
+}
+
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-card h2 {
+  margin: 0 0 5px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.form-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 0.85rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus {
+  border-color: #5B9BD5;
+  outline: none;
+}
+
+.btn-submit {
+  background: #0099CC;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #007BAA;
+}
+
+.login-link {
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.login-link a {
+  color: #FF8C42;
+  text-decoration: none;
+}
+div{
+  position: relative;
+
+}
+
+div i{
+ position: absolute;
+  right: 0%;
+  bottom: 10px;  /* alinha dentro do input */
+  cursor: pointer;
+  font-size: 20px;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulários | Madison</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Formulários <span>Web</span></h1>
+      <nav class="nav">
+        <button class="nav-btn" data-target="cadastro">Cadastro</button>
+        <button class="nav-btn" data-target="login">Login</button>
+        <button class="nav-btn" data-target="contato">Contato</button>
+        <button class="nav-btn" data-target="newsletter">Newsletter</button>
+        <button id="toggle-theme" aria-pressed="false" title="Alternar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ALERTA GLOBAL -->
+    <div id="alert" class="alert" role="status" aria-live="polite"></div>
+
+    <!-- CADASTRO -->
+    <section id="cadastro" class="card active" aria-labelledby="titulo-cadastro">
+      <h2 id="titulo-cadastro" class="card-title">Cadastro de Usuário</h2>
+      <form id="form-cadastro" novalidate>
+        <div class="grid">
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Ex.: Maria Silva" />
+            <small class="error" id="err-nome"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="seuemail@exemplo.com" />
+            <small class="error" id="err-email"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(99) 99999-9999" />
+            <small class="hint">Opcional. Aceita apenas dígitos.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="nascimento">Data de nascimento</label>
+            <input id="nascimento" name="nascimento" type="date" required />
+            <small class="error" id="err-nascimento"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="genero">Gênero</label>
+            <select id="genero" name="genero" required>
+              <option value="" selected disabled>Selecione</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+              <option value="nao-binario">Não binário</option>
+              <option value="prefiro-nao-informar">Prefiro não informar</option>
+            </select>
+            <small class="error" id="err-genero"></small>
+          </div>
+
+          <fieldset class="form-group col-span-2">
+            <legend>Preferências de acesso</legend>
+            <div class="inline">
+              <label class="switch">
+                <input type="checkbox" id="pref-contrast" />
+                <span>Alto contraste</span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" id="pref-font" />
+                <span>Fonte ampliada</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group password">
+            <label for="senha">Senha</label>
+            <div class="password-wrap">
+              <input id="senha" name="senha" type="password" required minlength="6" placeholder="••••••••" />
+              <button type="button" id="toggle-senha" aria-label="Mostrar senha" class="icon-btn" title="Mostrar/ocultar senha">👁️</button>
+            </div>
+            <meter id="pass-strength" min="0" max="4" low="1" high="3" optimum="4" value="0"></meter>
+            <small class="hint" id="pass-hint">Força da senha</small>
+            <small class="error" id="err-senha"></small>
+          </div>
+
+          <div class="form-group password">
+            <label for="confirma">Confirmar senha</label>
+            <div class="password-wrap">
+              <input id="confirma" name="confirma" type="password" required minlength="6" placeholder="••••••••" />
+              <button type="button" id="toggle-confirma" aria-label="Mostrar senha de confirmação" class="icon-btn" title="Mostrar/ocultar senha">👁️</button>
+            </div>
+            <small class="error" id="err-confirma"></small>
+          </div>
+
+          <div class="form-group col-span-2">
+            <label for="bio">Sobre você</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Fale resumidamente sobre você (opcional)"></textarea>
+          </div>
+
+          <div class="form-group col-span-2">
+            <label for="arquivo" class="file-label">
+              <input id="arquivo" name="arquivo" type="file" accept=".png,.jpg,.jpeg,.pdf" />
+              Anexar arquivo (opcional)
+            </label>
+          </div>
+
+          <div class="form-group col-span-2 inline">
+            <label class="switch">
+              <input type="checkbox" id="termos" required />
+              <span>Li e aceito os termos de uso</span>
+            </label>
+            <small class="error" id="err-termos"></small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="reset" class="btn secondary">Limpar</button>
+          <button type="submit" class="btn primary">Criar conta</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login" class="card" aria-labelledby="titulo-login">
+      <h2 id="titulo-login" class="card-title">Login</h2>
+      <form id="form-login" novalidate>
+        <div class="form-group">
+          <label for="login-email">E-mail</label>
+          <input id="login-email" name="login-email" type="email" required autocomplete="email" placeholder="seuemail@exemplo.com" />
+          <small class="error" id="err-login-email"></small>
+        </div>
+        <div class="form-group password">
+          <label for="login-senha">Senha</label>
+          <div class="password-wrap">
+            <input id="login-senha" name="login-senha" type="password" required placeholder="••••••••" />
+            <button type="button" id="toggle-login" aria-label="Mostrar senha" class="icon-btn" title="Mostrar/ocultar senha">👁️</button>
+          </div>
+          <small class="error" id="err-login-senha"></small>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Entrar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="card" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato" class="card-title">Contato</h2>
+      <form id="form-contato" novalidate>
+        <div class="grid">
+          <div class="form-group">
+            <label for="ct-nome">Seu nome</label>
+            <input id="ct-nome" name="ct-nome" type="text" required />
+            <small class="error" id="err-ct-nome"></small>
+          </div>
+          <div class="form-group">
+            <label for="ct-email">Seu e-mail</label>
+            <input id="ct-email" name="ct-email" type="email" required />
+            <small class="error" id="err-ct-email"></small>
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Suporte</option>
+              <option>Comercial</option>
+              <option>Feedback</option>
+            </select>
+            <small class="error" id="err-assunto"></small>
+          </div>
+          <div class="form-group col-span-2">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <small class="error" id="err-mensagem"></small>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="reset" class="btn secondary">Limpar</button>
+          <button type="submit" class="btn primary">Enviar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="card" aria-labelledby="titulo-newsletter">
+      <h2 id="titulo-newsletter" class="card-title">Newsletter</h2>
+      <form id="form-news" novalidate>
+        <div class="form-group">
+          <label for="news-email">E-mail</label>
+          <input id="news-email" name="news-email" type="email" required placeholder="seuemail@exemplo.com" />
+          <small class="error" id="err-news-email"></small>
+        </div>
+        <div class="form-group inline">
+          <label class="switch">
+            <input type="checkbox" id="news-termos" required />
+            <span>Aceito receber comunicações</span>
+          </label>
+          <small class="error" id="err-news-termos"></small>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Assinar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- DADOS LOCAIS (simula 'backend') -->
+    <section id="dados" class="card" aria-labelledby="titulo-dados">
+      <h2 id="titulo-dados" class="card-title">Envios (simulação local)</h2>
+      <div id="lista-dados" class="data-list" aria-live="polite"></div>
+      <div class="actions">
+        <button id="btn-limpar-dados" class="btn danger">Apagar envios</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="ano"></span> Madison — Formulários Acessíveis e Responsivos.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

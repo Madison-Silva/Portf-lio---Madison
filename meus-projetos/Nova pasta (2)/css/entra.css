@@ -1,0 +1,150 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.link-login {
+  margin-right: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-inscrever {
+  background-color: #0091b2;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Área de login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-card h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.btn-entrar {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #ff7300;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-entrar:hover {
+  background-color: #e96500;
+}
+
+.register-text {
+  margin-top: 15px;
+}
+
+.register-text a {
+  color: #ff7300;
+  text-decoration: none;
+}
+
+/* Rodapé */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+}
+
+.footer-logo {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.footer-right a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #555;
+}

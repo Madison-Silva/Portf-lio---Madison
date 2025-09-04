@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Madison</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="navbar container">
+      <h1 class="logo">Madison<span>.dev</span></h1>
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero container">
+    <div class="hero-content">
+      <h2>Olá, eu sou <span>Madison</span> 👋</h2>
+      <h3 class="typing">Desenvolvedor Frontend</h3>
+      <p>Transformando ideias em interfaces modernas, acessíveis e responsivas.</p>
+      <a href="#projects" class="btn">Ver Projetos</a>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="about" class="about container">
+    <h2>Sobre Mim</h2>
+    <p>
+      Sou desenvolvedor frontend com experiência também em tarefas de backend. 
+      Crio interfaces modernas, responsivas e acessíveis, sempre focando em design, usabilidade e performance. 
+      Além disso, sei estruturar a base por trás das aplicações, garantindo que o visual e a lógica funcionem em harmonia. 
+      Para mim, desenvolvimento web é unir criatividade e tecnologia para entregar experiências digitais completas.
+    </p>
+  </section>
+
+  <!-- ===== HABILIDADES ===== -->
+  <section id="skills" class="skills container">
+    <h2>Habilidades</h2>
+    <div class="skills-grid">
+      <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
+      <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
+      <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+      <div class="skill"><i class="fas fa-pencil-ruler"></i> Figma</div>
+      <div class="skill"><i class="fas fa-code"></i> PHP</div>
+      <div class="skill"><i class="fas fa-code"></i> Python</div>
+      <div class="skill"><i class="fas fa-code"></i> C*</div>
+    </div>
+  </section>
+
+  <!-- ===== PROJETOS ===== -->
+  <section id="projects" class="projects container">
+    <h2>Projetos</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="img/Captura de tela 2025-09-03 205057.png" alt="Projeto 1">
+        <div class="project-info">
+          <h3>Projeto 1</h3>
+          <p>Tela de login para uma lanchonete.</p>
+          <a href="meus-projetos/tela de login/index.html" target="_blank" class="btn">Live Demo</a>
+          <a href="#" target="_blank" class="btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="img/Captura de tela 2025-09-03 165622.png" alt="Projeto 2">
+        <div class="project-info">
+          <h3>Projeto 2</h3>
+          <p>Site para atividades escolares adaptadas para TDAH, TEA, Dislexia.</p>
+          <a href="meus-projetos/Nova pasta (2)/index.html" target="_blank" class="btn">Live Demo</a>
+          <a href="#" target="_blank" class="btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="img/Captura de tela 2025-09-03 214103.png" alt="Projeto 3">
+        <div class="project-info">
+          <h3>Projeto 3</h3>
+          <p>Formulários completos e responsivos.</p>
+          <a href="meus-projetos/site-formularios/index.html" target="_blank" class="btn">Live Demo</a>
+          <a href="#" target="_blank" class="btn-outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contact" class="contato container">
+    <h2 class="contatos-titulo">Entre em Contato</h2>
+    <form class="formulario-contato" id="formulario">
+      <div class="grupo-form">
+        <input type="text" placeholder="Nome" class="campo-form">
+      </div>
+      <div class="grupo-form">
+        <textarea class="campo-form" placeholder="Digite sua mensagem" rows="4" id="mensagem"></textarea>
+      </div>
+      <button type="button" onclick="enviarWhats()" class="botao-form">Chamar no WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    function enviarWhats() {
+      const numero = "5561981690425"; // Seu número com DDI + DDD
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      if (mensagem === "") {
+        alert("Por favor, digite uma mensagem antes de enviar.");
+        return;
+      }
+
+      const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(link, "_blank");
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
