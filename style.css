@@ -344,3 +344,20 @@ img {
     width: 100%;
   }
 }
+
+
+/* ================== RESPONSIVIDADE ================== */
+
+/* Esconde o menu em telas pequenas (até 768px) */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+/* Mostra o menu em telas grandes (a partir de 769px) */
+@media (min-width: 769px) {
+  .menu {
+    display: block;
+  }
+}
